@@ -1,4 +1,3 @@
-"""
 1)НОД +
 2)Нахождение простого +
 3)Нахождение количество делителей +
@@ -9,18 +8,3 @@
 8)Решение простейшей системы вычетов
 9)Символ Лежандра
 10)Символ Якоби
-"""
-
-from math import sqrt
-
-
-def del_cnt(n):  # 3
-    cnt = 0
-    for i in range(1, int(sqrt(n))+1):
-        if n % i == 0:
-            cnt += 1
-    return cnt*2
-
-
-# print(eratosthen(10))
-print(*eratosthen(100))
