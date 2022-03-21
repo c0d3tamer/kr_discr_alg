@@ -5,7 +5,7 @@
 from math import sqrt
 
 
-def euler_f(n: int) -> int:
+def euler(n: int) -> int:
     result = n
     for i in range(2, n):
         if (n % i == 0):
@@ -26,7 +26,7 @@ def evclid_nod(a: int, b: int) -> int:  # 1
     return a+b
 
 
-def test(n: int) -> int:
+def euler_2(n: int) -> int:
     cnt = 0
     for i in range(1, n):
         if evclid_nod(n, i) == 1:
@@ -36,5 +36,5 @@ def test(n: int) -> int:
 
 n = int(input())
 
-print(euler_f(n))
-print(test(n))
+print(euler(n))
+print(euler_2(n))

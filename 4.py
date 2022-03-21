@@ -8,7 +8,7 @@ def mebius_func(n: int) -> int:
     nums = []
     devider = 2
 
-    while devider <= sqrt(n)+1:
+    while devider * devider <= n:
         if n % devider == 0:
             nums += [devider]
             n //= devider
