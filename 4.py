@@ -1,30 +1,30 @@
 """
 Функция Мебиуса
 """
-
 from math import sqrt
 
-n = int(input("Введите число: "))
+
+def mebius_func(n: int) -> int:
+    nums = []
+    devider = 2
+
+    while devider <= sqrt(n)+1:
+        if n % devider == 0:
+            nums += [devider]
+            n //= devider
+        else:
+            devider += 1
+    if n > 1:
+        nums += [n]
+    deviders_count = len(nums)
+
+    # сравниваем количество элементов списка и кортежа(в кортеже не существует повторяющихся элементов)
+    # если кол-во разное, слевовательно присудствует квадрат числа
+    if len(nums) != len(set(nums)):
+        return 0
+    if deviders_count % 2 == 0:
+        return 1
+    return -1
 
 
-Ans = []
-count_divs = 0
-d = 2
-while d * d <= n:
-    if n % d == 0:
-        Ans.append(d)
-        n //= d
-        count_divs += 1
-    else:
-        d += 1
-if n > 1:
-    Ans.append(n)
-    count_divs += 1
-
-
-for i in range(0, count_divs):
-    for j in range(i+1, count_divs):
-        if Ans[i] == Ans[j]:
-            print("Функция Мйбиуса = 0")
-            exit()
-print("Функция Мйбиуса = 1" if count_divs % 2 == 0 else "Функция Мйбиуса = -1")
+print(mebius_func(25))
