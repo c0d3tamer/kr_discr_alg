@@ -1,3 +1,9 @@
+"""
+Функция Мебиуса
+"""
+
+from math import sqrt
+
 n = int(input("Введите число: "))
 
 
