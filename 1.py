@@ -1,3 +1,8 @@
+'''
+1 НОД
+'''
+
+
 def evclid_nod(a, b):  # 1
     while a != 0 and b != 0:
         if a > b:

@@ -1,19 +1,22 @@
+"""
+2 Решето этаросфена
+"""
+
 from math import sqrt
 
 
 def eratosthen(n):  # 2
     a = list(range(n+1))
     a[1] = 0
-    ind = 2
-    while ind <= sqrt(n):
+    for ind in range(2, int(sqrt(n))+1):
         if a[ind] != 0:
             j = ind*2
             while j <= n:
                 a[j] = 0
                 j += ind
-        ind += 1
-    a = [i for i in a if i != 0]
+    a = set(a)
+    a.remove(0)
     return a
 
 
-print(eratosthen(100))
+print(*eratosthen(100))
