@@ -4,10 +4,6 @@
 
 
 def jacobi(a, n):
-    if n <= 0:
-        raise ValueError("'n' must be a positive integer.")
-    if n % 2 == 0:
-        raise ValueError("'n' must be odd.")
     a %= n
     result = 1
     while a != 0:

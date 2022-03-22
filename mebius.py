@@ -27,4 +27,4 @@ def mebius_func(n: int) -> int:
     return -1
 
 
-print(mebius_func(25))
+print(mebius_func(3945))

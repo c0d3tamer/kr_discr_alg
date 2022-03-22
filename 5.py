@@ -17,24 +17,4 @@ def euler(n: int) -> int:
     return result
 
 
-def evclid_nod(a: int, b: int) -> int:  # 1
-    while a != 0 and b != 0:
-        if a > b:
-            a %= b
-        else:
-            b %= a
-    return a+b
-
-
-def euler_2(n: int) -> int:
-    cnt = 0
-    for i in range(1, n):
-        if evclid_nod(n, i) == 1:
-            cnt += 1
-    return cnt
-
-
-n = int(input())
-
-print(euler(n))
-print(euler_2(n))
+print(euler(int(input())))

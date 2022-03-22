@@ -12,4 +12,4 @@ def evclid_nod(a, b):  # 1
     return a+b
 
 
-print(evclid_nod(5, 7))
+print(evclid_nod(int(input()), int(input())))
